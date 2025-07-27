@@ -11,6 +11,9 @@ export default defineConfig([
     extends: [
       js.configs.recommended,
       reactHooks.configs["recommended-latest"],
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:react/jsx-runtime",
       reactRefresh.configs.vite,
     ],
     languageOptions: {
@@ -25,7 +28,11 @@ export default defineConfig([
     rules: {
       "no-unused-vars": "off",
       "react/prop-types": "off",
-      "quotes": ["error", "double"]
+      "quotes": ["error", "double"],
+      "react/jsx-wrap-multilines": ["error", {
+        "return": "parens-new-line"
+      }],
+      "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }]
     },
   },
 ])
