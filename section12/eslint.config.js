@@ -20,7 +20,7 @@ export default tseslint.config([
       globals: globals.browser,
     },
     rules: {
-      'react/no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'off',
     },
   },
 ])
